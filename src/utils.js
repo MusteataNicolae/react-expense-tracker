@@ -1,5 +1,5 @@
 export const currencyFormatter = new Intl.NumberFormat(undefined, {
-  currency: "mxn",
+  currency: "MDL",
   style: "currency",
   minimumFractionDigits: 0
 })

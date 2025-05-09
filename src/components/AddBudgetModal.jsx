@@ -21,20 +21,20 @@ export default function AddBudgetModal({ show, handleClose }) {
     <Modal show={show} onHide={handleClose}>
       <Form onSubmit={handleSubmit}>
         <Modal.Header closeButton>
-          <Modal.Title>Nuevo presupuesto</Modal.Title>
+          <Modal.Title>Buget nou</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Group className="mb-3" controlId="name">
-            <Form.Label>Nombre</Form.Label>
+            <Form.Label>Nume</Form.Label>
             <Form.Control ref={nameRef} type="text" required />
           </Form.Group>
           <Form.Group className="mb-3" controlId="max">
-            <Form.Label>Limite de gastos</Form.Label>
+            <Form.Label>Limită de cheltuieli</Form.Label>
             <Form.Control ref={maxRef} type="number" required min={0} step={100} />
           </Form.Group>
           <div className="d-flex justify-content-end">
             <Button variant="success" type="submit">
-              Agregar
+              Adaugă
             </Button>
           </div>
         </Modal.Body>

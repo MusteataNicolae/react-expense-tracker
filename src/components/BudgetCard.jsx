@@ -42,8 +42,8 @@ export default function BudgetCard({
 
         {!hideButtons && (
           <Stack direction="horizontal" gap="2" className="mt-4">
-            <Button size="sm" variant="outline-primary" className="ms-auto" onClick={onAddExpenseClick}><i class="bi bi-plus-circle"></i> Gasto</Button>
-            <Button size="sm" onClick={onViewExpensesClick} variant="outline-secondary"><i class="bi bi-list-task"></i> Ver gastos</Button>
+            <Button size="sm" variant="outline-primary" className="ms-auto" onClick={onAddExpenseClick}><i class="bi bi-plus-circle"></i> Adaugă cheltuială</Button>
+            <Button size="sm" onClick={onViewExpensesClick} variant="outline-secondary"><i class="bi bi-list-task"></i> Vezi cheltuieli</Button>
           </Stack>
         )}
       </Card.Body>

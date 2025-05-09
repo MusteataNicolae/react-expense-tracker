@@ -8,6 +8,8 @@ import AddExpenseModal from "./components/AddExpenseModal"
 import ViewExpensesModal from "./components/ViewExpensesModal"
 import { useState } from "react"
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetsContext"
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import About from "./components/About";
 
 function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
@@ -25,9 +27,9 @@ function App() {
     <>
     <Container className="mt-3">
       <Stack direction="horizontal" gap="2" className="mb-4">
-        <h1 className="me-auto">Presupuestos</h1>
-        <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}><i class="bi bi-plus-circle"></i> Presupuesto</Button>
-        <Button variant="secondary" onClick={openAddExpenseModal}><i class="bi bi-plus-circle"></i> Gasto</Button>
+        <h1 className="me-auto">Bugetele</h1>
+        <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}><i class="bi bi-plus-circle"></i> Adaugă Buget</Button>
+        <Button variant="secondary" onClick={openAddExpenseModal}><i class="bi bi-plus-circle"></i> Adaugă Cheltuială</Button>
       </Stack>
 
       <div style={{ display:"grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start" }}>

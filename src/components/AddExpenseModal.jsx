@@ -23,21 +23,21 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) 
     <Modal show={show} onHide={handleClose}>
       <Form onSubmit={handleSubmit}>
         <Modal.Header closeButton>
-          <Modal.Title>Nuevo gasto</Modal.Title>
+          <Modal.Title>Adaugă cheltuială</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Group className="mb-3" controlId="description">
-            <Form.Label>Descripción</Form.Label>
+            <Form.Label>Descriere</Form.Label>
             <Form.Control ref={descriptionRef} type="text" required />
           </Form.Group>
           <Form.Group className="mb-3" controlId="amount">
-            <Form.Label>Monto</Form.Label>
+            <Form.Label>Suma</Form.Label>
             <Form.Control ref={amountRef} type="number" required min={0} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="budgetId">
-            <Form.Label>Categoría</Form.Label>
+            <Form.Label>Categorie</Form.Label>
             <Form.Select defaultValue={defaultBudgetId} ref={budgetIdRef}>
-              <option id={UNCATEGORIZED_BUDGET_ID}>Uncategorized</option>
+              <option id={UNCATEGORIZED_BUDGET_ID}>Necategorizat</option>
               {budgets.map(budget => (
                 <option key={budget.id} value={budget.id}>{budget.name}</option>
               ))}
@@ -45,7 +45,7 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) 
           </Form.Group>
           <div className="d-flex justify-content-end">
             <Button variant="success" type="submit">
-              Agregar
+              Adaugă
             </Button>
           </div>
         </Modal.Body>

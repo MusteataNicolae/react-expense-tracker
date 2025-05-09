@@ -15,14 +15,14 @@ export default function ViewExpensesModal({ budgetId, handleClose }) {
       <Modal.Header closeButton>
         <Modal.Title>
           <Stack direction="horizontal" gap="2">
-            <div>Gastos - {budget?.name}</div>
+            <div>Cheltuieli - {budget?.name}</div>
             {budgetId !== UNCATEGORIZED_BUDGET_ID && (
               <Button onClick={() => {
                 deleteBudget(budget)
                 handleClose()
               }} 
               variant="outline-danger">
-                Borrar
+                Șterge
               </Button>
             )}
           </Stack>
